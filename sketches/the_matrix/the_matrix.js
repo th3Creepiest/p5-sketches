@@ -5,21 +5,14 @@
 const FADE_INTERVAL = 1.6
 const SYMBOL_SIZE = 14
 
-let streams = []
+let streams
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight)
   textFont("Consolas")
   textSize(SYMBOL_SIZE)
   background(0)
-
-  let x = 0
-  for (let i = 0; i <= width / SYMBOL_SIZE; i++) {
-    let stream = new Stream()
-    stream.generateSymbols(x, random(-2000, 0))
-    streams.push(stream)
-    x += SYMBOL_SIZE
-  }
+  createStreams()
 }
 
 function draw() {
@@ -27,6 +20,11 @@ function draw() {
   streams.forEach(function (stream) {
     stream.render()
   })
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight)
+  createStreams()
 }
 
 class KanaSymbol {
@@ -57,6 +55,17 @@ class KanaSymbol {
     this.rain = function () {
       this.y = this.y >= height ? 0 : (this.y += this.speed)
     }
+  }
+}
+
+function createStreams() {
+  streams = []
+  let x = 0
+  for (let i = 0; i <= width / SYMBOL_SIZE; i++) {
+    let stream = new Stream()
+    stream.generateSymbols(x, random(-2000, 0))
+    streams.push(stream)
+    x += SYMBOL_SIZE
   }
 }
 
