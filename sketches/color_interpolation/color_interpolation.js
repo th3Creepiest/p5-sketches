@@ -1,7 +1,7 @@
 // https://p5js.org/examples/repetition-color-interpolation/
 
 function setup() {
-  createCanvas(400, 400)
+  createCanvas(windowWidth, windowHeight)
   colorMode(HSB)
   noStroke()
   describe(
@@ -48,19 +48,7 @@ function setup() {
   fill(0)
   text("Color A", margin, margin, boxWidth, stripeHeight - margin * 2)
   fill(255)
-  rect(
-    5,
-    height - stripeHeight + margin,
-    boxWidth,
-    stripeHeight - margin * 2,
-    cornerRadius
-  )
+  rect(5, height - stripeHeight + margin, boxWidth, stripeHeight - margin * 2, cornerRadius)
   fill(0)
-  text(
-    "Color B",
-    5,
-    height - stripeHeight + margin,
-    60,
-    stripeHeight - margin * 2
-  )
+  text("Color B", 5, height - stripeHeight + margin, 60, stripeHeight - margin * 2)
 }
