@@ -1,5 +1,6 @@
 // Rotating Polar Perlin Noise Loops
 // by Monica.dev
+// https://codepen.io/M0nica/pen/vYVPzyL
 // Based on The Coding Train: Coding Challenge #136.1: Polar Perlin Noise Loops
 // https://www.youtube.com/watch?v=ZI1dmHv3MeM
 
@@ -8,8 +9,7 @@ let noiseMax = 0.75
 let slider
 let zOff = 0
 function setup() {
-  createCanvas(400, 400)
-  //   createCanvas(windowWidth, windowHeight)
+  createCanvas(windowWidth, windowHeight)
   background("#e9e0f0")
 
   slider = createSlider(2, 10, 0, 0.1)
