@@ -28,9 +28,7 @@ function draw() {
   // Start the recursive branching
   branch(120, 0)
 
-  describe(
-    "A tree drawn by recursively drawing branches, with angle determined by the user mouse position."
-  )
+  describe("A tree drawn by recursively drawing branches, with angle determined by the user mouse position.")
 }
 
 function branch(h, level) {
