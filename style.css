@@ -1,0 +1,30 @@
+body {
+  margin: 8px;
+  background-color: rgb(20, 18, 18);
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+h1 {
+  text-align: left;
+  margin: 4px;
+  font-size: 30px;
+  color: white;
+}
+p {
+  text-align: center;
+  margin: 2px;
+  font-size: 14px;
+  color: white;
+}
+img {
+  object-fit: cover;
+  width: 200px;
+  max-height: 200px;
+  margin: 2px;
+  transition: transform 0.2s ease-in-out;
+}
+img:hover {
+  transform: scale(1.05);
+}
