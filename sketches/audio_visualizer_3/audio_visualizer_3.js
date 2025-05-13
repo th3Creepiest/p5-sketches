@@ -13,6 +13,7 @@ function setup() {
 function draw() {
   background(0)
   stroke(255)
+  // noFill()
 
   var wave = fft.waveform()
 
